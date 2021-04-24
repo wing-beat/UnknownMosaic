@@ -8,6 +8,8 @@
 * 목표
     * 뉴스 또는 유튜브에서 일반인 모자이크 처리를 자동화 하여 영상 편집 시간을 단축시킨다
     * 영상에 의도치 않게 출연한 일반인들을 자동 모자이크 처리 하여 초상권 침해를 방지한다
+## Demo
+![image](https://user-images.githubusercontent.com/58676931/115949863-c818e080-a512-11eb-8636-72ca58d936a2.png)
 
 ## 가상환경 세팅
 
@@ -42,4 +44,7 @@
 
 ## 사용된 도구
 * [Tensorflow](https://www.tensorflow.org/api_docs)
+* google colab
+* FFmpeg
+* opencv
 
