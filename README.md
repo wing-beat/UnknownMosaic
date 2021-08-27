@@ -98,9 +98,3 @@ python recognize_faces_video.py --encodings encodings.pickle
 ```
 python recognize_faces_video.py --encodings encodings.pickle --output output/jurassic_park_trailer_output.avi --display 0 --method overlay --sticker overlay_stickers/sticker.png
 ```
-
-
-
-## 배포
-추가로 실제 시스템에 배포하는 방법을 노트해 두세요.
-
