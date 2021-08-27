@@ -79,7 +79,8 @@ https://github.com/opencv/opencv/tree/master/samples/dnn/face_detector
    모든 얼굴이 변환되어 encodings 변수에 담기게 되고, pickle이 완성된다.  
 
 4. stickers 폴더에 스티커 이미지 파일 생성   
-5. 1) Image Processing  
+5. 
+   1) Image Processing  
    ```bash
    python recognize_faces_image.py --encodings encodings.pickle --image testset/test.jpg --method overlay --sticker stickers/mj.png
    ```
