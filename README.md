@@ -69,7 +69,7 @@ python build_dataset_CaffeCNN.py --output dataset/swkim/
 ```
 output경로에 특정 인물의 이름으로 폴더를 만들어 두고 경로를 지정한다.   
 설정해둔 횟수에 도달하면 자동 종료된다.   
-3. encode_faces.py로 pickle 파일 생성  
+3. encode_faces.py로 pickle 파일 생성   
 ```
 python encode_faces.py --dataset dataset --encodings encodings.pickle
 ```
