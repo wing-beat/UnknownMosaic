@@ -12,12 +12,16 @@
     * 영상에 의도치 않게 출연한 일반인들을 자동 모자이크 처리 하여 초상권 침해를 방지한다
 ## Demo
 ![모자이크1](https://user-images.githubusercontent.com/67955977/131105868-b3a15009-d455-40e5-a56b-79726225b521.PNG)
+김민지의 얼굴을 학습시킨 후 face recognition을 통해 해당 인물을 제외한 unknown을 모자이크 처리한다.
+왼쪽은 일반 모자이크, 오른쪽은 스티커 모자이크이다.
+![모자이크2](https://user-images.githubusercontent.com/67955977/131106432-b76cab82-91f2-4519-9301-44deb8b64fb7.PNG)
+위와 같은 과정으로 김서원의 얼굴을 학습시킨 후 프로세싱해 추출한 이미지이다.
 
 ## 개발 도구
 * Anaconda 
 * Python
 * Google colab 
-* 라이브러리 : OpenCV, Tensorflow, FFmpeg
+* 라이브러리 : OpenCV, Tensorflow, FFmpeg, FaceRecognition, pickle
 
 ## 가상환경 세팅
 
