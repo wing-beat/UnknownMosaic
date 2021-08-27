@@ -4,6 +4,7 @@
 * 김민지(Minji Kim), 김서원(Seowon Kim)
 
 ## Project
+![캡처](https://user-images.githubusercontent.com/67955977/131096230-5f90b499-bade-4e01-90d7-8a7b0c1e51dc.PNG)
 * 목적 : 특정 인물을 제외한 인물 모자이크 자동화
 * 목표
     * 뉴스 또는 유튜브에서 일반인 모자이크 처리를 자동화 하여 영상 편집 시간을 단축시킨다
