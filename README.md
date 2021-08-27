@@ -63,14 +63,12 @@ https://github.com/opencv/opencv/tree/master/samples/dnn/face_detector
 
 ## 실행
 1. PretrainedModel 폴더 다운로드   
-
 2. Build_Dataset_CaffeCNN.py로 dataset 생성 (webcam)  
 ```
 python build_dataset_CaffeCNN.py --output dataset/swkim/
 ```
 output경로에 특정 인물의 이름으로 폴더를 만들어 두고 경로를 지정한다.   
 설정해둔 횟수에 도달하면 자동 종료된다.   
-
 3. encode_faces.py로 pickle 파일 생성  
 ```
 python encode_faces.py --dataset dataset --encodings encodings.pickle
