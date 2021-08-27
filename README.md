@@ -14,12 +14,12 @@
 
 ## Demo
 ![모자이크1](https://user-images.githubusercontent.com/67955977/131105868-b3a15009-d455-40e5-a56b-79726225b521.PNG)
-* 김민지의 얼굴을 학습시킨 후 face recognition을 통해 해당 인물을 제외한 unknown을 모자이크 처리한다.
+* 특정 인물(minji)의 얼굴을 학습시킨 후 face recognition을 통해 해당 인물을 제외한 unknown을 모자이크 처리한다.
 * 왼쪽은 일반 모자이크, 오른쪽은 스티커 모자이크이다.
    
    
 ![모자이크2](https://user-images.githubusercontent.com/67955977/131106432-b76cab82-91f2-4519-9301-44deb8b64fb7.PNG)
-* 위와 같은 과정으로 김서원의 얼굴을 학습시킨 후 프로세싱해 추출한 이미지이다. 
+* 위와 같은 과정으로 특정 인물(seowon)의 얼굴을 학습시킨 후 프로세싱해 추출한 이미지이다. 
 
 
 ## 개발 도구
@@ -27,6 +27,11 @@
 * Python
 * Google colab 
 * 라이브러리 : OpenCV, Tensorflow, FFmpeg, FaceRecognition, pickle
+
+
+## 구조
+![structure](https://user-images.githubusercontent.com/67955977/131110753-780676cb-7684-419c-9e83-271b36ac632d.PNG)
+
 
 ## 가상환경 세팅
 
@@ -52,9 +57,27 @@
     ```bash
     pip install numpy matplotlib pillow opencv-python
     ```
+    
+    
+https://github.com/opencv/opencv/tree/master/samples/dnn/face_detector
 
 ## 테스트 실행하기
-이 시스템을 위한 자동화된 테스트를 실행하는 방법을 적어주세요.
+1. PretrainedModel 폴더 다운로드
+2. Build_Dataset_CaffeCNN.py로 dataset 생성 (webcam)
+```
+python build_dataset_CaffeCNN.py --output dataset/swkim/
+```
+output경로에 특정 인물의 이름으로 폴더를 만들어 두고 경로를 지정한다. 
+사진 촬영이 설정해둔 횟수에 도달하면 자동 종료된다.
+3. encode_faces.py로 pickle 파일 생성
+```
+python encode_faces.py --dataset dataset --encodings encodings.pickle
+```
+dataset의 경로와 encodings의 경로를 지정해준다.
+이미지를 BGR에서 RGB로 변환하고 얼굴에 해당하는 영역의 좌표를 감지한다.
+모델은 cnn을 사용했고, face_encodings 함수를 호출하면 얼굴 영역을 128 크기의 vector로 변환한다.
+모든 얼굴이 변환되어 encodings 변수에 담기게 되고, pi
+4. 
 
 ## 배포
 추가로 실제 시스템에 배포하는 방법을 노트해 두세요.
