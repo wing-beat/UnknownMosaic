@@ -75,8 +75,8 @@ https://github.com/opencv/opencv/tree/master/samples/dnn/face_detector
    ```
    dataset의 경로와 encodings의 경로를 지정해준다.  
    이미지를 BGR에서 RGB로 변환하고 얼굴에 해당하는 영역의 좌표를 감지한다.  
-   모델은 cnn을 사용했고, face_encodings 함수를 호출하면 얼굴 영역을 128 크기의 vector로 변환한다.  
-   모든 얼굴이 변환되어 encodings 변수에 담기게 되고, pickle이 완성된다.  
+   face_encodings 함수를 호출하면 얼굴 영역을 128 크기의 vector로 변환한다.  
+   모든 얼굴이 변환되어 encodings 변수에 담기게 되고, pickle 파일이 완성된다.  
 
 4. stickers 폴더에 스티커 이미지 파일 생성   
 5.   
