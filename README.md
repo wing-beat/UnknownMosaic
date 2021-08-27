@@ -82,7 +82,7 @@ https://github.com/opencv/opencv/tree/master/samples/dnn/face_detector
 5-1. Image Processing  
    ```bash
    python recognize_faces_image.py --encodings encodings.pickle --image testset/test.jpg --method overlay --sticker stickers/mj.png
-   ```bash
+   ```
    pickle 파일 경로, test image 경로를 지정하고, method로 mosaic(일반 모자이크), overlay(스티커)를 지정한다.    
    method를 overlay로 설정하면 sticker 경로도 지정해준다.  
 5-2. Video Processing  
