@@ -68,14 +68,14 @@ https://github.com/opencv/opencv/tree/master/samples/dnn/face_detector
 ```
 python build_dataset_CaffeCNN.py --output dataset/swkim/
 ```
-output경로에 특정 인물의 이름으로 폴더를 만들어 두고 경로를 지정한다.   
-사진 촬영이 설정해둔 횟수에 도달하면 자동 종료된다.   
+    output경로에 특정 인물의 이름으로 폴더를 만들어 두고 경로를 지정한다.   
+    사진 촬영이 설정해둔 횟수에 도달하면 자동 종료된다.   
 
 3. encode_faces.py로 pickle 파일 생성  
 ```
 python encode_faces.py --dataset dataset --encodings encodings.pickle
 ```
-dataset의 경로와 encodings의 경로를 지정해준다.  
+    dataset의 경로와 encodings의 경로를 지정해준다.  
 이미지를 BGR에서 RGB로 변환하고 얼굴에 해당하는 영역의 좌표를 감지한다.  
 모델은 cnn을 사용했고, face_encodings 함수를 호출하면 얼굴 영역을 128 크기의 vector로 변환한다.  
 모든 얼굴이 변환되어 encodings 변수에 담기게 되고, pickle이 완성된다.  
