@@ -80,7 +80,7 @@ https://github.com/opencv/opencv/tree/master/samples/dnn/face_detector
 
 4. stickers 폴더에 스티커 이미지 파일 생성   
 5.   
-   1) Image Processing  
+   **1) Image Processing**
    ```bash
    python recognize_faces_image.py --encodings encodings.pickle --image testset/test.jpg --method overlay --sticker stickers/mj.png
    ```
