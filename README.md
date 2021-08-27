@@ -67,35 +67,34 @@ https://github.com/opencv/opencv/tree/master/samples/dnn/face_detector
    ```
    python build_dataset_CaffeCNN.py --output dataset/swkim/
    ```
-output경로에 특정 인물의 이름으로 폴더를 만들어 두고 경로를 지정한다.   
-설정해둔 횟수에 도달하면 자동 종료된다.   
+   output경로에 특정 인물의 이름으로 폴더를 만들어 두고 경로를 지정한다.   
+   설정해둔 횟수에 도달하면 자동 종료된다.   
 3. encode_faces.py로 pickle 파일 생성   
-```
-python encode_faces.py --dataset dataset --encodings encodings.pickle
-```
-dataset의 경로와 encodings의 경로를 지정해준다.  
-이미지를 BGR에서 RGB로 변환하고 얼굴에 해당하는 영역의 좌표를 감지한다.  
-모델은 cnn을 사용했고, face_encodings 함수를 호출하면 얼굴 영역을 128 크기의 vector로 변환한다.  
-모든 얼굴이 변환되어 encodings 변수에 담기게 되고, pickle이 완성된다.  
-
+   ```
+   python encode_faces.py --dataset dataset --encodings encodings.pickle
+   ```
+   dataset의 경로와 encodings의 경로를 지정해준다.  
+   이미지를 BGR에서 RGB로 변환하고 얼굴에 해당하는 영역의 좌표를 감지한다.  
+   모델은 cnn을 사용했고, face_encodings 함수를 호출하면 얼굴 영역을 128 크기의 vector로 변환한다.  
+   모든 얼굴이 변환되어 encodings 변수에 담기게 되고, pickle이 완성된다.  
 4. stickers 폴더에 스티커 이미지 파일 생성   
 5-1. Image Processing  
-```
-python recognize_faces_image.py --encodings encodings.pickle --image testset/test.jpg --method overlay --sticker stickers/mj.png
-```
-pickle 파일 경로, test image 경로를 지정하고, method로 mosaic(일반 모자이크), overlay(스티커)를 지정한다.    
-method를 overlay로 설정하면 sticker 경로도 지정해준다.  
+   ```
+   python recognize_faces_image.py --encodings encodings.pickle --image testset/test.jpg --method overlay --sticker stickers/mj.png
+   ```
+   pickle 파일 경로, test image 경로를 지정하고, method로 mosaic(일반 모자이크), overlay(스티커)를 지정한다.    
+   method를 overlay로 설정하면 sticker 경로도 지정해준다.  
 5-2. Video Processing  
-```
-python unknown_processing_video.py --encodings encodings.pickle --input videos/video.mp4
-```
-```
-python unknown_processing_video.py --encodings encodings.pickle --input videos/video.mp4 --method overlay --sticker stickers/osw.png
-```
+   ```
+   python unknown_processing_video.py --encodings encodings.pickle --input videos/video.mp4
+   ```
+   ```
+   python unknown_processing_video.py --encodings encodings.pickle --input videos/video.mp4 --method overlay --sticker stickers/osw.png
+   ```
 5-3. WebCam Processing  
-```
-python recognize_faces_video.py --encodings encodings.pickle
-```
-```
-python recognize_faces_video.py --encodings encodings.pickle --output output/jurassic_park_trailer_output.avi --display 0 --method overlay --sticker overlay_stickers/sticker.png
-```
+   ```
+   python recognize_faces_video.py --encodings encodings.pickle
+   ```
+   ```
+   python recognize_faces_video.py --encodings encodings.pickle --output output/jurassic_park_trailer_output.avi --display 0 --method overlay --sticker overlay_stickers/sticker.png
+   ```
