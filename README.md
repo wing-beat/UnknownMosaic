@@ -1,4 +1,4 @@
-# UnknownProcessing (백종원 모자이크)
+# UnknownMosaicProcessing (백종원 모자이크)
 
 ## Team
 * 김민지(Minji Kim), 김서원(Seowon Kim)
